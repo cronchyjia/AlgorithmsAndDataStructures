@@ -1,0 +1,26 @@
+Arrays of integers 𝑨 and 𝑩 have the same size, 𝒏. 
+There's a new definition called "weird equality": two arrays 𝑨 and 𝑩 are weirdly equal to each other if at
+least one of the following four conditions is met:
+
+1) 𝑨 = 𝑩, meaning that the elements in the corresponding indices are the same.
+   If 𝒏 is divisible by 2, we divide each of the arrays into 2 parts of equal size. So, 𝑨 will be divided into 𝑨𝟏 and 𝑨𝟐 (from
+   left to right). Similarly, 𝑩 is divided into 𝑩𝟏 and 𝑩𝟐. Now, the following conditions are checked and if any of them are
+   satisfied we can still say that the arrays are weirdly equal to each other.
+   
+2) (𝑨𝟏 is weird equal to 𝑩𝟏) AND (𝑨𝟐 is weird equal to𝑩𝟐)
+
+3) (𝑨𝟏 is weird equal to 𝑩𝟏) AND (𝑨𝟏 is weird equal to 𝑩𝟐)
+
+4) (𝑨𝟐 is weird equal to 𝑩𝟐) AND (𝑨𝟐 is weird equal to 𝑩𝟏)
+
+Note: if 𝒏 is not divisible by 2, then conditions 2, 3, and 4 are NOT satisfied.
+
+Input Format
+  The first line has an integer 𝟏 ≤ 𝒏 ≤ 𝟏𝟎𝟒. The second line has the 𝒏 integers, 𝒂𝟏, 𝒂𝟐, ... , 𝒂𝒏−𝟏, of array 𝑨, and the third
+  line has the 𝒏 integers, 𝒃𝟏, 𝒃𝟐, ... , 𝒃𝒏−𝟏, of array 𝑩, where 𝟎 ≤ 𝒂𝒊, 𝒃𝒊 ≤ 𝟏𝟎𝟖, for each 𝟎 ≤ 𝒊 ≤ 𝒏 − 𝟏.
+  
+Output Format
+  On one line print "YES" if the arrays are weird equal to each other, and "NO" if they are not. This output is case-
+  sensitive and the quotes are just for clarity.
+  
+The solution is written as a recursive program that correctly and efficiently reports the solution. The runtime is 𝑇(𝑛) ∈ 𝑂(𝑛2) time.
